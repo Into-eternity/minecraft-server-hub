@@ -1,0 +1,34 @@
+# Minecraft Server Hub private/runtime data
+config/hub.config.json
+data/
+backups/
+runtime/
+logs/
+.update-staging/
+.worktrees/
+
+# Environment / secrets
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Minecraft operational data should not be part of this public profile
+world/
+world_nether/
+world_the_end/
+crash-reports/
