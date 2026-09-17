@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="Minecraft Server Hub — self-hosted management for Minecraft Java Edition servers and modpacks.">
+  <title>Minecraft Server Hub</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand">Minecraft Server Hub</div>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#curseforge">CurseForge</a>
+        <a href="#security">Security</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span class="badge"><span class="dot"></span> Self-hosted Minecraft control plane</span>
+      <h1>Run your Minecraft servers from one place.</h1>
+      <p class="lead">
+        Deploy, monitor, back up, recover, network, and control Minecraft Java Edition servers —
+        including modded server packs — from a single self-hosted interface.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="#features">Explore the project</a>
+        <a class="btn" href="https://github.com/Into-eternity/minecraft-server-hub">View Git repository</a>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <h2>Server operations without the busywork.</h2>
+      <p class="section-copy">
+        Minecraft Server Hub consolidates the repetitive operational work required to run multiple
+        Minecraft servers, especially modded environments.
+      </p>
+      <div class="grid">
+        <article class="card"><h3>Lifecycle & health</h3><p>Start, stop, restart, monitor, recover from crashes, and track server readiness from one interface.</p></article>
+        <article class="card"><h3>Server-pack deployment</h3><p>Analyze pack metadata, loader requirements, Java, EULA, RAM, ports, and first-start health checks.</p></article>
+        <article class="card"><h3>Player connection endpoints</h3><p>Generate copy-ready Radmin VPN, ZeroTier, LAN, or public addresses with each server's real port.</p></article>
+        <article class="card"><h3>Mod-aware control</h3><p>Use mod-specific command shortcuts, macros, and safe configuration shortcuts for supported formats.</p></article>
+        <article class="card"><h3>Backups & recovery</h3><p>Keep server backups, update rollback points, crash reports, logs, watchdog retries, and crash-loop protection.</p></article>
+        <article class="card"><h3>MCSManager integration</h3><p>Register and operate server instances while keeping management credentials on the self-hosted Hub.</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="curseforge">
+      <h2>CurseForge integration with distribution controls respected.</h2>
+      <div class="integration">
+        <div class="card">
+          <p class="section-copy">For user-provided CurseForge manifest-based server packs, Minecraft Server Hub uses the official API to resolve project/file metadata and retrieve only files available for third-party distribution.</p>
+          <ul class="checks">
+            <li>No public file mirror</li>
+            <li>No re-hosting of CurseForge artifacts</li>
+            <li>No bypass of project distribution settings</li>
+            <li>No redistribution of CurseForge API keys</li>
+            <li>API credentials remain server-side</li>
+          </ul>
+        </div>
+        <pre class="code">manifest.json
+      │
+      ├─ Minecraft version
+      ├─ loader version
+      └─ CurseForge project/file IDs
+              │
+              ▼
+        CurseForge API
+              │
+      author distribution allowed?
+          ┌───┴───┐
+         yes      no
+          │        │
+          ▼        ▼
+       deploy    stop / manual path</pre>
+      </div>
+    </section>
+
+    <section class="section" id="security">
+      <h2>Private operational data stays private.</h2>
+      <p class="section-copy">The public project profile contains no server credentials, API keys, authentication state, world files, backups, or private runtime configuration.</p>
+      <div class="card">
+        <ul class="checks">
+          <li>CurseForge and MCSManager keys are treated as server-side secrets</li>
+          <li>Private Hub configuration is excluded from the public repository</li>
+          <li>Minecraft world and backup data are not part of this site</li>
+          <li>The repository includes a defensive .gitignore for common private paths</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Minecraft Server Hub</strong><br>
+    Independent self-hosted Minecraft server-management project.<br>
+    Minecraft is a trademark of Microsoft/Mojang. CurseForge is a trademark/service of its respective owner.
+  </footer>
+</body>
+</html>
